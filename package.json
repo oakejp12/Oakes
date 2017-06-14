@@ -18,7 +18,8 @@
   "homepage": "https://github.com/oakejp12/Oakes#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "github": "^9.2.0"
   },
   "engines": {
     "node": "6.9.1"
