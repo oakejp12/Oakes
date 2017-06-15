@@ -8,7 +8,7 @@ const github = new GitHubApi({
     headers: {
         "Content-Type":  "application/json",
         "Accept": "application/vnd.github.v3.full+json",
-        "User-Agent": "oakejp12"
+        "User-Agent": config.gh_username
     },
     followRedirects: false,
     timeout: 5000,
