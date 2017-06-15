@@ -4,4 +4,4 @@ externals/
 # Node.js necessities
 node_modules
 
-\npm-debug.log
+npm-debug.log
