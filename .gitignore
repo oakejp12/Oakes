@@ -1,5 +1,5 @@
 # For now, ignore now-ui-kit
-now-ui/
+externals/
 
 # Node.js necessities
 node_modules
