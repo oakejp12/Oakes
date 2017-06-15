@@ -19,7 +19,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "github": "^9.2.0"
+    "github": "^9.2.0",
+    "serve-favicon": "^2.4.3"
   },
   "engines": {
     "node": "6.9.1"
