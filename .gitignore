@@ -4,5 +4,4 @@ now-ui/
 # Node.js necessities
 node_modules
 
-# Ssssshhh
-config/
+\npm-debug.log
