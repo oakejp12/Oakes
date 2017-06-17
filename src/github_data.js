@@ -31,3 +31,23 @@ exports.grabWatchedRepos = function (requestOptions, callback) {
     github.activity.getWatchedRepos({}, (err, res) => callback(err, JSON.stringify(res)));
 }
  
+/**
+ * Get count of commits made in Github 
+ * @param {*} requestOptions
+ * @param {*} callback
+ */
+exports.grabCommitCount = (requestOptions, callback) => {
+    console.log("Grabbing commit count");
+
+    // TODO: Call github.activity
+    // github.activity.get
+
+}
+
+exports.grabRepoCount = (requestOptions, callback) => {
+    console.log("Grabbing repo count");
+
+    github.repos.getAll({
+        // Optional params - currently get everything
+    }, (err, res) => callback(err, res));
+}
