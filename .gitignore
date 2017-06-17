@@ -5,3 +5,6 @@ externals/
 node_modules
 
 npm-debug.log
+
+# Development environment configs
+config/config_devel.js
