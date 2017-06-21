@@ -1,6 +1,8 @@
 //@ts-check
 const GitHubApi = require('github');
+
 const config = require('../config/config');
+const config_dev = require('../config/config_devel');
 
 const github = new GitHubApi({
     protocol: "https",
@@ -38,16 +40,16 @@ exports.grabWatchedRepos = function (requestOptions, callback) {
  */
 exports.grabCommitCount = (requestOptions, callback) => {
     console.log("Grabbing commit count");
-
     // TODO: Call github.activity
-    // github.activity.get
-
 }
 
+/**
+ * Get count for how many repos I have
+ * @param {*} requestOptions
+ * @param {*} callback 
+*/
 exports.grabRepoCount = (requestOptions, callback) => {
     console.log("Grabbing repo count");
 
-    github.repos.getAll({
-        // Optional params - currently get everything
-    }, (err, res) => callback(err, res));
+    github.repos.getAll({ visibility: "all", }, (err, res) => callback(err, JSON.stringify(res)));
 }
