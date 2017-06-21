@@ -2,7 +2,6 @@
 const GitHubApi = require('github');
 
 const config = require('../config/config');
-const config_dev = require('../config/config_devel');
 
 const github = new GitHubApi({
     protocol: "https",
