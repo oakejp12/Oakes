@@ -8,3 +8,6 @@ npm-debug.log
 
 # Development environment configs
 config/*
+
+# Heroku necessities
+.env
