@@ -25,11 +25,11 @@ github.authenticate({
  * @param {*} requestOptions HTTP request options
  * @param {*} callback 
  */
-exports.grabWatchedRepos = function (requestOptions, callback) {
+exports.grabFollowers = (requestOptions, callback) => {
     console.log("Grabbing watched repos...");
 
     // Query for all the watched repos
-    github.activity.getWatchedRepos({}, (err, res) => callback(err, JSON.stringify(res)));
+    github.users.getFollowers({}, (err, res) => callback(err, JSON.stringify(res)));
 }
  
 /**
@@ -39,7 +39,23 @@ exports.grabWatchedRepos = function (requestOptions, callback) {
  */
 exports.grabCommitCount = (requestOptions, callback) => {
     console.log("Grabbing commit count");
-    // TODO: Call github.activity
+    this.grabRepoCount({}, (err, response) => {
+        process(response);
+    });
+
+    function process(response) {
+        let data_json = JSON.parse(response.data);
+
+        // Get all of the repos
+        // For each repo, get all of the commit data
+        // TODO: There has to be a shorter way to get this...
+        data_json.forEach((item) => {
+            github.repos.getCommits({
+                owner: "oakejp12",
+                repo: item.name
+            }, (err, res) => callback(err, res));
+        });
+    }
 }
 
 /**
