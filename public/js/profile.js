@@ -1,35 +1,20 @@
 /**
- * Grab repo count and append it to appropriate element
+ * Grab count and append it to appropriate element
  * TODO: Do we really need to return the state of the JSON call?
  */
-var repo_data = function() { 
-    return $.getJSON("/repos", (data) => {
-        console.log("Getting repo data from the front...");
-
-        let data_json = JSON.parse(data);
-
-        // Length of the array will tell you how many repos are contained
-        let repo_array = data_json.data;
-
-        document.getElementById("repos").innerHTML = repo_array.length;
+var github_data = (path, id) => {
+    return $.getJSON(path, (data) => {
+        const data_json = JSON.parse(data);
+        let actual_data = data_json.data;
+        document.getElementById(id).innerHTML = actual_data.length;
     })
     .fail((err) => {
-        console.error("Error grabbing repo data.", err);
-    });
-}
-
-/**
- * Grab commit count and append it to the appropriate element
- */
-var commit_data = function() {
-    return $.getJSON("/commits", (data) => {
-
+        console.error("Error grabbing follower data.", err);
     })
-    .fail((err) => {
-        console.error("Error grabbing commit count.", err);
-    });
 }
 
 $(document).ready(() => {
-    repo_data(); // Set H2 element to number of repos
+    github_data("/repos", "repos"); // Set H2 element to number of repos
+    github_data("/followers", "followers"); // Set H2 element to number of followers
+    // github_data("/commits", "commits");
 });
