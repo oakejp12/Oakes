@@ -13,9 +13,9 @@ module.exports = function(app) {
 
   app.get("/blog", (req, res) => {
       console.log("Hitting the blog path.");
-      res.json({
-          "message": "Wait! Coming soon!"
-      });
+      res.end(
+          "Wait! Site is under construction. Coming soon!"
+      );
       res.end();
   });
 };
