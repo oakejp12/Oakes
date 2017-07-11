@@ -2,7 +2,7 @@
  * This file offers a set of routes for sending 
  * users to the various HTML landing pages
  */
-const path = require('path');
+import path from 'path';
 
 module.exports = function(app) {
 

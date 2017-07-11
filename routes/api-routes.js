@@ -1,4 +1,4 @@
-const request = require('../src/github_data');
+import request from '../src/github_data';
 
 module.exports = function(app) {
 
