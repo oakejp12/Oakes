@@ -1,11 +1,11 @@
-const express       = require('express');
-const bodyParser    = require('body-parser');
-const http          = require('http');
-const path          = require('path');
-const favicon       = require('serve-favicon');
+import express      from 'express';
+import bodyParser   from 'body-parser';
+import http         from 'http';
+import path         from 'path';
+import favicon      from 'serve-favicon';
 
 // Set up the Express application
-var app = express();
+const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
