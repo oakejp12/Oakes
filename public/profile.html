@@ -87,11 +87,11 @@
                             <p>Repositories</p> 
                         </div>
                         <div class="social-description">
-                            <h2>26</h2>
+                            <h2 id="commits"></h2>
                             <p>Commits</p>
                         </div>
                         <div class="social-description">
-                            <h2>48</h2>
+                            <h2 id="followers"></h2>
                             <p>Followers</p>
                         </div>
                     </div>
@@ -111,78 +111,25 @@
                 </div>
                 <h3 class="title">About me</h3>
                 <h5 class="description" id="about_me">
-                    This project serves to showcase the ideas and delivery of an engineer of considerable range. I, Johan Oakes, write, architect, and build these projects.
-                    Besides telling you some terse description of myself, I'll let you take a look, ask questions, create issues, and point out anything better I could work on. 
-                    
+                    This project serves to showcase the ideas and delivery of an engineer of considerable range. I write, architect, and build these projects.
+                    Besides telling you some description of myself, I'll let you take a look, ask questions, create issues, etc. Given time, I'll throw things 
+                    in here that should tell you a lot more about my non-developer life.  
                 </h5>
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
                         <h4 class="title text-center">Current Projects</h4>
-                        <div class="nav-align-center">
-                            <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tablist">
-                                        <i class="now-ui-icons design_image"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
-                                        <i class="now-ui-icons location_world"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#messages" role="tablist">
-                                        <i class="now-ui-icons sport_user-run"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <!-- Tab panes -->
+                    <!-- TODO: Insert GIF's of projects here -->
                     <div class="tab-content gallery">
                         <div class="tab-pane active" id="home" role="tabpanel">
                             <div class="row">
                                 <div class="col-md-10 offset-md-1">
                                     <div class="row collections">
                                         <div class="col-md-6">
-                                            <img src="./img/bg1.jpg" alt="" class="img-raised">
-                                            <img src="./img/bg3.jpg" alt="" class="img-raised">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="./img/bg8.jpg" alt="" class="img-raised">
-                                            <img src="./img/bg7.jpg" alt="" class="img-raised">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="profile" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="row collections">
-                                        <div class="col-md-6">
-                                            <img src="./img/bg6.jpg" class="img-raised">
-                                            <img src="./img/bg11.jpg" alt="" class="img-raised">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="./img/bg7.jpg" alt="" class="img-raised">
-                                            <img src="./img/bg8.jpg" alt="" class="img-raised">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="messages" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="row collections">
-                                        <div class="col-md-6">
-                                            <img src="./img/bg3.jpg" alt="" class="img-raised">
-                                            <img src="./img/bg8.jpg" alt="" class="img-raised">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="./img/bg7.jpg" alt="" class="img-raised">
-                                            <img src="./img/bg6.jpg" class="img-raised">
+                                            <a data-animation="false" rel="tooltip" title="Smart Bugger" data-placement="right" target="_blank" href="https://github.com/oakejp12/Smart-Bugger">
+                                                <img src="./img/smart_debugger.gif" alt="Smart Debugger" class="img-raised">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +146,7 @@
                         <li>
                             <a href="#">
                                 Johan Oakes
-                            </a>
+                             </a>
                         </li>
                         <li>
                             <a href="#about_me">
@@ -223,16 +170,16 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>, Designed and
-                    Coded by <a href="https://github.com/oakejp12/Oakes" target="_blank">Oakes, Johan</a>.
+                    Coded by <a href="https://github.com/oakejp12/Oakes" rel="tooltip" data-placement="top" data-animation="false" title="Check out the website code!" target="_blank">Oakes, Johan</a>.
                 </div>
             </div>
         </footer>
     </div>
 </body>
 <!--   Core JS Files   -->
-<script src="./js/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="./js/tether.min.js" type="text/javascript"></script>
-<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/dist/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="./js/dist/tether.min.js" type="text/javascript"></script>
+<script src="./js/dist/bootstrap.min.js" type="text/javascript"></script>
 <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
 <script src="./js/plugins/bootstrap-switch.js"></script>
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
@@ -244,5 +191,4 @@
 
 <!-- Extended functionality -->
 <script src="./js/profile.js" type="text/javascript"></script>
-
 </html>
