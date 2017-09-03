@@ -166,11 +166,15 @@
                     </ul>
                 </nav>
                 <div class="copyright">
-                    &copy;
                     <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed and
-                    Coded by <a href="https://github.com/oakejp12/Oakes" rel="tooltip" data-placement="top" data-animation="false" title="Check out the website code!" target="_blank">Oakes, Johan</a>.
+                        var sNew = document.createElement("div");
+                        sNew.async = true;
+                        var year = new Date().getFullYear();
+                        var s0 = document.getElementsByClassName("copyright")[0];
+                        s0.innerHTML = "&copy; " + year;
+                        s0.parentNode.insertBefore(sNew, s0);
+                    </script>, Developed by 
+                    <a href="https://github.com/oakejp12/Oakes" rel="tooltip" data-placement="top" data-animation="false" title="Check out the website code!" target="_blank">Oakes, Johan</a>.
                 </div>
             </div>
         </footer>
