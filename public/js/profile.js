@@ -4,15 +4,11 @@
  */
 var github_data = (path, id) => {
     return $.getJSON(path, (data) => {
-        console.log(data);
-        
-        const data_json = JSON.parse(data);
-        
-        console.log("JSON: " + data_json);
+        const data_json = (JSON.parse(data)).data;
 
-        const actual_data = data_json.data;
+        console.dir(data_json);
         
-        document.getElementById(id).innerHTML = actual_data.length;
+        document.getElementById(id).innerHTML = data_json.length;
     })
     .fail((err) => {
         console.error("Error grabbing data.", err);
@@ -22,5 +18,5 @@ var github_data = (path, id) => {
 $(document).ready(() => {
     github_data("/repos", "repos"); // Set H2 element to number of repos
     github_data("/followers", "followers"); // Set H2 element to number of followers
-    github_data("/commits", "commits");
+    // github_data("/commits", "commits");
 });
