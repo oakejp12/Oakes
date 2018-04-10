@@ -19,7 +19,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
 
 require(path.join(__dirname, 'routes', 'html-routes.js'))(app);
-require(path.join(__dirname, 'routes', 'api-routes.js'))(app);
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);

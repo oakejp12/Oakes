@@ -7,7 +7,7 @@ import path from 'path';
 module.exports = function(app) {
 
   app.get("/", (req, res) => {
-    console.log("Hitting the index path...");
+    console.log("Hitting the home page.");
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
 
