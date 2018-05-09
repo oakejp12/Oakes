@@ -3,6 +3,19 @@ body {
     background-color: #f6f5f0;
 }
 
+#main-region {
+    padding-top: 160px;
+}
+
 #signature {
-    text-align: center;
+    padding-bottom: 160px;
+    text-align: left;
+}
+
+#description {
+    font-family: Montserrat;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 300;
+    text-align: left;
 }
