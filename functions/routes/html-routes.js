@@ -2,13 +2,14 @@
  * This file offers a set of routes for sending 
  * users to the various HTML landing pages
  */
-import path from 'path';
+const path = require('path');
 
 module.exports = function(app) {
 
   app.get("/", (req, res) => {
     console.log("Hitting the home page.");
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.sendFile(path.join(__dirname, "..", "public", "profile.html"));
   });
 
   app.get("/blog", (req, res) => {
@@ -18,4 +19,9 @@ module.exports = function(app) {
       );
       res.end();
   });
+
+  app.get('*', (req, res) => {
+    console.log("YOU DUMMY! GO TO A LIVING PAGE!");
+    res.sendFile(path.join(__dirname, "..", "public", "404.html"));
+  }) 
 };
