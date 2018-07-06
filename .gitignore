@@ -11,3 +11,7 @@ config/*
 
 # Heroku necessities
 .env
+
+# Firebase necessities
+.firebaserc
+firebase.json
