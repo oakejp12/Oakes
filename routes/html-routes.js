@@ -8,7 +8,7 @@ module.exports = function(app) {
 
   app.get("/", (req, res) => {
     console.log("Hitting the home page.");
-    res.sendFile(path.join(__dirname, "../public/profile.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   app.get("/blog", (req, res) => {
