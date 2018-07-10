@@ -15,10 +15,10 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
-app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, 'functions', "public")));
+app.use(favicon(path.join(__dirname,'functions', 'public', 'img', 'favicon.ico')));
 
-require(path.join(__dirname, 'routes', 'html-routes.js'))(app);
+require(path.join(__dirname, 'functions', 'routes', 'html-routes.js'))(app);
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
