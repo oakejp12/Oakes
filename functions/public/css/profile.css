@@ -19,3 +19,39 @@ body {
     font-weight: 300;
     text-align: left;
 }
+
+.collapse.navbar-collapse {
+    justify-content: space-around;
+    margin: 12px;
+}
+
+.navbar.navbar-transparent {
+    background-color: transparent !important;
+    box-shadow: none;
+    padding-top: 20px;
+}
+
+.navbar p {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.navbar a {
+    color: #353535;
+    margin-left: 45px;
+}
+
+.navbar-nav {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.fixed-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
