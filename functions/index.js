@@ -25,15 +25,7 @@ app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
 });
 
-function App(req, res) {
-    if (!(req.url)) {
-        req.url = '/';
-        req.path = '/';
-    }
-    return app(req, res);
-}
-
 // Create and Deploy Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
-exports.app = functions.https.onRequest(App);
+exports.app = functions.https.onRequest(app);
