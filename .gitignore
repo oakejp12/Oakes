@@ -15,3 +15,6 @@ config/*
 # Firebase necessities
 .firebase/
 firebase-debug.log
+
+# IntelliJ
+.idea
