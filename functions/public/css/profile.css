@@ -5,8 +5,8 @@ body {
 }
 
 .nav-link, .navbar-brand {
-    font-style: italic;
-    font-size: 150%;
+    font-size: 130%;
+    text-transform: uppercase;
 }
 
 #main-region {
